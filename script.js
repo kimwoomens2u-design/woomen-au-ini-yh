@@ -1,4 +1,3 @@
-
 // ====================== PENGATURAN ======================
 const CORRECT_PASSCODE = "2509"; // Ganti sesuai keinginanmu
 // Hint bisa diganti di index.html
