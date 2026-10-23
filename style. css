@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.screen, .app-screen {
+  width: 375px;
+  height: 812px;
+  background: #000;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  box-shadow: 0 0 40px rgba(0,0,0,0.7);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ===== LOCKSCREEN ===== */
+#lockscreen {
+  background: linear-gradient(160deg, #1a1a2e, #0f3460);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.time {
+  font-size: 80px;
+  font-weight: 200;
+}
+
+.date {
+  font-size: 20px;
+  opacity: 0.85;
+  margin: 10px 0 80px;
+}
+
+.swipe {
+  position: absolute;
+  bottom: 90px;
+  opacity: 0.7;
+}
+
+#passcode-screen {
+  margin-top: 30px;
+}
+
+#passcode-screen input {
+  width: 180px;
+  padding: 14px;
+  font-size: 22px;
+  text-align: center;
+  border: none;
+  border-radius: 14px;
+  margin: 15px 0;
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 25px;
+  margin: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* ===== HOMESCREEN ===== */
+#homescreen {
+  background: #000;
+  padding-top: 55px;
+}
+
+.status-bar {
+  padding: 8px 28px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.apps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  padding: 50px 28px;
+}
+
+.app {
+  text-align: center;
+  cursor: pointer;
+}
+
+.icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin: 0 auto 8px;
+}
+
+.whatsapp { background: #25D366; }
+.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.notes { background: #ffcc00; }
+.safari { background: #007aff; }
+
+.app span {
+  font-size: 12px;
+}
+
+/* ===== APP HEADER ===== */
+.app-header {
+  background: #1c1c1e;
+  padding: 55px 20px 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.app-header button {
+  background: none;
+  font-size: 22px;
+  padding: 0;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  padding: 15px;
+  height: calc(100% - 110px);
+  overflow-y: auto;
+  background: #000;
+}
+
+/* Daftar chat */
+.chat-item {
+  background: #1c1c1e;
+  padding: 14px 16px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-item:active {
+  background: #2c2c2e;
+}
+
+.chat-item .name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.chat-item .preview {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-top: 3px;
+}
+
+/* Bubble chat */
+.message {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.message.them {
+  background: #1c1c1e;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.message.me {
+  background: #005c4b;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+  margin-left: auto;
+}
+
+.message .time {
+  font-size: 11px;
+  opacity: 0.6;
+  margin-top: 4px;
+  text-align: right;
+}
+
+#chat-messages {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+/* Notes */
+.note-item {
+  background: #1c1c1e;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.note-item h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.note-item small {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.note-item p {
+  font-size: 15px;
+  margin-top: 8px;
+  line-height: 1.45;
+  opacity: 0.9;
+}
